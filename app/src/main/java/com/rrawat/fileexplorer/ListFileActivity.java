@@ -1,5 +1,6 @@
 package com.rrawat.fileexplorer;
 
+import android.app.ActionBar;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -51,6 +52,9 @@ public class ListFileActivity extends ListActivity {
         /*ArrayAdapter adapter = new ArrayAdapter(this,
                 android.R.layout.simple_list_item_2, android.R.id.text1, values);
         setListAdapter(adapter);*/
+
+        ActionBar actionBar = getActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
     }
 
     @Override
