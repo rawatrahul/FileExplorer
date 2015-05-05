@@ -47,9 +47,10 @@ public class ListFileActivity extends ListActivity {
         Collections.sort(values);
 
         // Put the data into the list
-        ArrayAdapter adapter = new ArrayAdapter(this,
+        this.setListAdapter(new ArrayAdapter<String>(this,R.layout.mylist,R.id.Itemname,values));
+        /*ArrayAdapter adapter = new ArrayAdapter(this,
                 android.R.layout.simple_list_item_2, android.R.id.text1, values);
-        setListAdapter(adapter);
+        setListAdapter(adapter);*/
     }
 
     @Override
